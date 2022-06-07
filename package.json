@@ -10,6 +10,8 @@
     "@types/node": "^17.0.40",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
+    "mobile-web-capture": "^17.2.5",
+    "ncp": "^2.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -29,9 +31,9 @@
     "workbox-streams": "^6.5.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "ncp node_modules/mobile-web-capture/dist build/static/mobile-web-capture && react-scripts start",
+    "build": "react-scripts build && ncp node_modules/mobile-web-capture/dist build/static/mobile-web-capture",
+    "test": "ncp node_modules/mobile-web-capture/dist build/static/mobile-web-capture && react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
