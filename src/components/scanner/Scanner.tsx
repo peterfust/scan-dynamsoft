@@ -78,7 +78,11 @@ export const Scanner = () => {
                 indices: number[],
                 type: number) => {
                 console.log('responseHandler', result, indices, type);
-                uploadBlob(result, {processId: 'TEST', fileName: 'test.pdf', customerId: 'ABC-123', consultantId: 'BCD-23423'})
+                let search = window.location.search;
+                let params = new URLSearchParams(search);
+                let customerId = params.get('customerId') || '';
+                let consultantId = params.get('consultantId') || '';
+                uploadBlob(result, {processId: 'TEST', fileName: 'test.pdf', customerId, consultantId})
             }
             const failureCallBack = (
                 errorCode: number,

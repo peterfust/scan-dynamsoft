@@ -37,7 +37,7 @@
   "scripts": {
     "clean": "rimraf build",
     "copy": "ncp node_modules/mobile-web-capture/dist public/mobile-web-capture",
-    "start": "react-scripts start",
+    "start": "copy && react-scripts start",
     "build": "copy && react-scripts build",
     "test": "copy && react-scripts test",
     "eject": "react-scripts eject"
