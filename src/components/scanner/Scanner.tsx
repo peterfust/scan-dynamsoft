@@ -146,9 +146,9 @@ export const Scanner = () => {
             <div id="dwtcontrolContainer"></div>
             <div className="controlbar">
                 {/* @ts-ignore */}
-                <Button onClick={scanDocument}>Scan</Button>
+                <Button onClick={scanDocument}>Scan your Documents</Button>
                 {/* @ts-ignore */}
-                <Button onClick={upload}>Upload</Button>
+                <Button onClick={upload}>Send to AXA</Button>
             </div>
         </div>
     );

@@ -1,22 +1,22 @@
 import React from 'react';
 import './App.css';
-import {Scanner} from "./components/scanner/Scanner"
-import {Footer} from "./components/footer/Footer";
-import Container from "./components/container/Container";
-import {Header} from "./components/heading/Header";
+import {Scanner} from "./components/scanner/Scanner";
+import {BrowserRouter, Route, Routes,} from "react-router-dom";
+import {Layout} from "./pages/Layout";
+import {QrCodeGenerator} from "./components/qrcodegenerator/QrCodeGenerator";
 
 function App() {
-  return (
-    <div className="App">
-        <Container>
-            <Header title="Scan your documents"/>
-            <div className="content">
-                <Scanner/>
-            </div>
-            <Footer/>
-        </Container>
-    </div>
-  );
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Scanner />} />
+                    <Route path="qrcode" element={<QrCodeGenerator />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
