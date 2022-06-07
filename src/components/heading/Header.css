@@ -1,0 +1,13 @@
+.navbar-row {
+    display: flex;
+}
+
+.logo {
+    width: 50px;
+    display: block;
+    margin: 5px 5px 5px 5px;
+}
+
+.title {
+    margin-left: 10px;
+}

@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@axa-ch/button": "^7.0.1",
+    "@axa-ch/footer-small": "^6.0.1",
+    "@axa-ch/heading": "^4.0.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,6 +13,7 @@
     "@types/node": "^17.0.40",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
+    "axios": "^0.27.2",
     "mobile-web-capture": "^17.2.5",
     "ncp": "^2.0.0",
     "react": "^18.1.0",
@@ -31,9 +35,11 @@
     "workbox-streams": "^6.5.3"
   },
   "scripts": {
-    "start": "ncp node_modules/mobile-web-capture/dist build/static/mobile-web-capture && react-scripts start",
-    "build": "react-scripts build && ncp node_modules/mobile-web-capture/dist build/static/mobile-web-capture",
-    "test": "ncp node_modules/mobile-web-capture/dist build/static/mobile-web-capture && react-scripts test",
+    "clean": "rimraf build",
+    "copy": "ncp node_modules/mobile-web-capture/dist public/mobile-web-capture",
+    "start": "react-scripts start",
+    "build": "copy && react-scripts build",
+    "test": "copy && react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

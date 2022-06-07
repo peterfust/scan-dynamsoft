@@ -1,0 +1,12 @@
+.controlbar{
+    display: flex;
+    justify-content: center;
+}
+
+.controlbar > axa-button {
+    margin-top: 5px;
+}
+
+.controlbar > axa-button:first-child {
+    margin-right: 50px;
+}
