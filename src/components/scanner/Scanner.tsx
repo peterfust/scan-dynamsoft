@@ -43,7 +43,14 @@ export const Scanner = () => {
             scannerViewer: {
                 autoDetect: {
                     enableAutoDetect: true
+                },
+                autoScan: {
+                    enableAutoScan: true
+                },
+                continuousScan: {
+                    enableContinuousScan: false
                 }
+
             },
             filterViewer: {
                 exitDocumentScanAfterSave: true
